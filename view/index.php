@@ -1,14 +1,14 @@
 <?php 
-include 'php/config.php';
+include '../php/config.php';
 
 
 echo alertaInicio();
 
-echo criaHeader();
+echo criaHeader("HOME");
 
 echo '
     <div class="px-4 py-5 my-5 text-center">
-      <img class="d-block mx-auto mb-4" src="Imagens/01.png" alt="" width="20%">
+      <img class="d-block mx-auto mb-4" src="../Imagens/01.png" alt="" width="20%">
       <h1 class="display-5 fw-bold text-body-emphasis">Auto Confiança</h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">Lembre-se de que cada dia é uma nova oportunidade para se reinventar, aprender algo novo e

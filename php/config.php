@@ -27,8 +27,8 @@
 //     }
 // }
 
-function criaHeader() {
-   // echo "Usuario : " . $usuario;
+function criaHeader($titulo) {
+   
 
     echo '<!doctype html>
 <html lang="pt-br">
@@ -36,9 +36,10 @@ function criaHeader() {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>| HOME |</title>
+  <title>| '.$titulo.' |</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -54,31 +55,19 @@ function criaHeader() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="../view/index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="local.html">Localização</a>
+              <a class="nav-link active" aria-current="page" href="../view/informacoes.php">Informações</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="contatos.html">Contatos</a>
+              <a class="nav-link active" aria-current="page" href="../view/cadastrar.php">Cadastro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../view/login.php">Login</a>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Opções
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Novo Pacote</a></li>
-                <li><a class="dropdown-item" href="#">Pacotes</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="login.html">Cadastro</a></li>
-                <li><a class="dropdown-item" href="login.html">Login</a></li>
-                <li><a class="dropdown-item" href="MinhaConta.html">Minha Conta</a></li>
-              </ul>
-            </li>
+            
 
           </ul>
           <form class="d-flex" role="search">
@@ -94,6 +83,24 @@ function criaHeader() {
         
         <main>';
 }
+//   função tirada do header q vou usar mais tarde
+// <li class="nav-item dropdown">
+//               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+//                 aria-expanded="false">
+//                 Opções
+//               </a>
+//               <ul class="dropdown-menu">
+//                 <li><a class="dropdown-item" href="#">Novo Pacote</a></li>
+//                 <li><a class="dropdown-item" href="#">Pacotes</a></li>
+//                 <li>
+//                   <hr class="dropdown-divider">
+//                 </li>
+//                 <li><a class="dropdown-item" href="login.html">Cadastro</a></li>
+//                 <li><a class="dropdown-item" href="login.html">Login</a></li>
+//                 <li><a class="dropdown-item" href="MinhaConta.html">Minha Conta</a></li>
+//               </ul>
+//             </li>
+
 
 function criaFooter() {
     echo ' </main>

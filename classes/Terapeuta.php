@@ -13,6 +13,9 @@ class Terapeuta extends Cadastro {
     public function getCodTerapeuta() {
         return $this->codTerapeuta;
     }
+    public function setcodTerapeuta($codTerapeuta) {
+        $this->codTerapeuta = $codTerapeuta;
+    }
 
     public function getFormacao() {
         return $this->formacao;

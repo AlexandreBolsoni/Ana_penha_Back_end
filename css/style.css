@@ -1,0 +1,118 @@
+/* estilização pagina de informação */
+.zapzap, #zapzap {
+    border: 0;
+    margin: 20px 0;
+    width: 10%;
+}
+.content {
+    margin:  0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: rgb(27, 107, 29);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+iframe {
+    border: 0;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-media a img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+/* formularios de login & cadastro */
+.login-container, .cadastrar-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    height: 100%;
+    margin: 10% 35%;
+}
+.login-container h2, .cadastrar-container h2 {
+    text-align: center;
+    color: rgb(27, 107, 29);
+}
+.login-container form, .cadastrar-container form {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+.login-container label, .cadastrar-container label {
+    margin-bottom: 5px;
+    color: rgb(27, 107, 29);
+}
+.login-container input[type="text"],
+.login-container input[type="password"],
+.cadastrar-container input[type="text"],
+.cadastrar-container input[type="password"],
+.cadastrar-container input[type="email"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(27, 107, 29);
+    border-radius: 4px;
+}
+.login-container input[type="submit"], 
+.cadastrar-container input[type="submit"] {
+    padding: 10px;
+    background-color: rgb(27, 107, 29);
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login-container input[type="submit"]:hover,
+.cadastrar-container input[type="submit"]:hover {
+    background-color: rgb(20, 80, 22);
+}
