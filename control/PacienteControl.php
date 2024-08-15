@@ -88,6 +88,43 @@ class PacienteControl
         }
         return false;
     }
+    public function buscarPorCod($codPaciente)
+    {
+        $sql = "SELECT * FROM cadastro WHERE cod_cadastro = '{$codPaciente}'";
+        $result = $this->conexao->query($sql);
+        $dadosCadastro = "";
+
+        if ($result->num_rows > 0) {
+            $dadosCadastro = $result->fetch_assoc();
+            $sql = "SELECT * FROM paciente WHERE codPaciente = '{$codPaciente}'";
+            $result = $this->conexao->query($sql);
+            $dadosPaciente = $result->fetch_assoc();
+
+            if ($result->num_rows > 0) {
+                $dadosPaciente = $result->fetch_assoc();
+            } else {
+                $dadosPaciente = "";
+            }
+        } else {
+            $dadosCadastro = "";
+        }
+        //criandopaciente com todos os dados
+        if ($dadosPaciente != "" && $dadosCadastro != "") {
+            $paciente = new Paciente(
+                $dadosCadastro['nome'],
+                $dadosCadastro['senha'],
+                $dadosCadastro['cpf'],
+                $dadosCadastro['email'],
+                $dadosCadastro['sobrenome'],
+                $dadosPaciente['dataNasc'],
+                $dadosPaciente['telefone']
+            );
+            $paciente->setCodPaciente($dadosPaciente['codPaciente']);
+            return $paciente;
+        } else {
+            return null;
+        }
+    }
     public function buscarPorCpf($cpf)
     {
         $sql = "SELECT * FROM cadastro WHERE cpf = '{$cpf}'";
@@ -124,5 +161,4 @@ class PacienteControl
 
         return null;
     }
-    
 }

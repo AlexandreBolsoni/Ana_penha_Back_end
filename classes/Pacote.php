@@ -1,15 +1,18 @@
 <?php
 require_once 'classes/Terapeuta.php';
+require_once 'classes/Paciente.php';
 class Pacote {
     private $codPacote;
-    private $terapeuta;
     private $dataInicio;
     private $valor;
     private $dataFinal;
     private $status;
+    private terapeuta $terapeuta;
+    private paciente $paciente; 
 
-    public function __construct(Terapeuta $terapeuta, $dataInicio, $valor, $dataFinal, $status) {
+    public function __construct(Terapeuta $terapeuta,$paciente, $dataInicio, $valor, $dataFinal, $status) {
         $this->terapeuta = $terapeuta;
+        $this->paciente = $paciente;
         $this->dataInicio = $dataInicio;
         $this->valor = $valor;
         $this->dataFinal = $dataFinal;
@@ -20,10 +23,23 @@ class Pacote {
     public function getCodPacote() {
         return $this->codPacote;
     }
+    public function setCodPacote($codPacote) {
+        $this->codPacote = $codPacote;
+    }
 
     public function getTerapeuta() {
         return $this->terapeuta;
     }
+    public function setTerapeuta($terapeuta) {
+        $this->terapeuta = $terapeuta;
+    }
+    public function getPaciente() {
+        return $this->paciente;
+    }
+    public function setPaciente($paciente) {
+        $this->paciente = $paciente;
+    }
+
 
     public function getDataInicio() {
         return $this->dataInicio;

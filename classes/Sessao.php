@@ -3,7 +3,6 @@ require_once 'classes/Paciente.php';
 require_once 'classes/Pacote.php';
 class Sessao {
     private $codSessao;
-    private $paciente;
     private $pacote;
     private $dataSessao;
     private $statusSessao;
@@ -11,8 +10,7 @@ class Sessao {
     private $observacoes;
     private $assinatura;
 
-    public function __construct(Paciente $paciente, Pacote $pacote, $dataSessao, $statusSessao, $horario, $observacoes, $assinatura) {
-        $this->paciente = $paciente;
+    public function __construct( Pacote $pacote, $dataSessao, $statusSessao, $horario, $observacoes, $assinatura) {
         $this->pacote = $pacote;
         $this->dataSessao = $dataSessao;
         $this->statusSessao = $statusSessao;
@@ -26,9 +24,7 @@ class Sessao {
         return $this->codSessao;
     }
 
-    public function getPaciente() {
-        return $this->paciente;
-    }
+    
 
     public function getPacote() {
         return $this->pacote;
@@ -76,7 +72,7 @@ class Sessao {
 
     function toString()
     {
-        return $this->paciente->toString() . "<br>Data de Inicio: " . $this->dataSessao . "<br>Status: " . $this->statusSessao;
+        return "Data: " . $this->dataSessao . "<br>Status: " . $this->statusSessao . "<br>Horário: " . $this->horario . "<br>Observações: " . $this->observacoes . "<br>Assinatura: " . $this->assinatura;
     }
  
 }
