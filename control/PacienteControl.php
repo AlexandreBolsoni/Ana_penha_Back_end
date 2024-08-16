@@ -88,15 +88,15 @@ class PacienteControl
         }
         return false;
     }
-    public function buscarPorCod($codPaciente)
+    public function buscarPorCod($cod)
     {
-        $sql = "SELECT * FROM cadastro WHERE cod_cadastro = '{$codPaciente}'";
+        $sql = "SELECT * FROM cadastro WHERE cod_cadastro = '{$cod}'";
         $result = $this->conexao->query($sql);
         $dadosCadastro = "";
 
         if ($result->num_rows > 0) {
             $dadosCadastro = $result->fetch_assoc();
-            $sql = "SELECT * FROM paciente WHERE codPaciente = '{$codPaciente}'";
+            $sql = "SELECT * FROM paciente WHERE codPaciente = '{$cod}'";
             $result = $this->conexao->query($sql);
             $dadosPaciente = $result->fetch_assoc();
 
