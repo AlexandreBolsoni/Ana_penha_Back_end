@@ -52,6 +52,25 @@ class PacoteControl
         }
         return null;
     }
+    public function cadastrar($obj){
+
+        if ($obj instanceof Pacote) {
+            $sql = "INSERT INTO pacote (dataInicio, valor, dataFinal, status, codPacote, codTerapeuta, codPaciente) VALUES ('{$obj->getDataInicio()}', '{$obj->getValor()}', '{$obj->getDataFinal()}', '{$obj->getStatus()}', '{$obj->getCodPacote()}', '{$obj->getTerapeuta()->getCodTerapeuta()}', '{$obj->getPaciente()->getCodPaciente()}')";
+
+            $result = $this->conexao->query($sql);
+
+            if ($result) {
+                return true;
+            }
+        }
+
+        return false;
+
+    }
+
+
+
+
     public function atualizar($obj)
     {
         if ($obj instanceof Pacote) {

@@ -24,6 +24,10 @@ class Sessao {
         return $this->codSessao;
     }
 
+    public function setCodSessao($codSessao) {
+        $this->codSessao = $codSessao;
+    }
+
     
 
     public function getPacote() {

@@ -15,9 +15,9 @@ require_once $path . '../control/SessaoControl.php';
 require_once $path . '../control/TerapeutaControl.php';
 
 $db = new Database("localhost", "root", "", "fisioterapiadb");
-$CadastroControl = new CadastroControl($db);
-$PacienteControl = new PacienteControl($db);
-$PacoteControl = new PacoteControl($conexao, $pacienteControl, $terapeutaControl);
-$SessaoControl = new SessaoControl($db);
-$TerapeutaControl = new TerapeutaControl($db);
+$cadastroControl = new CadastroControl($db);
+$pacienteControl = new PacienteControl($db);
+$pacoteControl = new PacoteControl($conexao, $pacienteControl, $terapeutaControl);
+$sessaoControl = new SessaoControl($db, $pacoteControl);
+$erapeutaControl = new TerapeutaControl($db);
 ?>
